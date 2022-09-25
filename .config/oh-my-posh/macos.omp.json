@@ -1,0 +1,91 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "palette": {
+    "purple": "#D4AAFC",
+    "cyan": "#56B6C2",
+    "blue": "#4B95E9",
+    "green": "#59C9A5",
+    "red": "#E36464",
+    "white": "#E0DEF4",
+    "yellow": "#F3AE35"
+  },
+  "console_title_template": "{{.Shell}} :: {{ .Folder }}",
+  "final_space": true,
+  "transient_prompt": {
+    "template": "⚡️ "
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "p:red",
+          "properties": {
+            "display_host": false
+          },
+          "style": "plain",
+          "template": "@{{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "p:cyan",
+          "properties": {
+            "home_icon": "~",
+            "style": "folder"
+          },
+          "style": "plain",
+          "template": "<p:white>in</> \uf74a {{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "p:purple",
+          "properties": {
+            "branch_icon": "<p:purple><b>\ue0a0 </b></>"
+          },
+          "style": "plain",
+          "template": " <p:white>on</> {{ .HEAD }}",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "properties": {
+            "always_enabled": true
+          },
+          "template": "{{ if gt .Code 0 }}🐴{{ else }}🦄{{ end }}",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "segments": [
+        {
+          "style": "plain",
+          "template": "<p:green>\ue718 {{ .Full }}</> ",
+          "type": "node"
+        },
+        {
+          "style": "plain",
+          "template": "/ <p:yellow>{{if .Version}}\uf487 {{.Version}}{{end}}</> ",
+          "type": "project"
+        },
+        {
+          "foreground": "p:white",
+          "style": "plain",
+          "template": "at <p:blue><b>{{ .CurrentDate | date \"15:04:05\" }}</b></>",
+          "type": "time"
+        }
+      ],
+      "type": "rprompt"
+    }
+  ]
+}
+

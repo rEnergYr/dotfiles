@@ -1,0 +1,39 @@
+name: Release CI
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  release:
+    name: Create release
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Extract version
+        uses: nyaa8/package-version@v1
+        with:
+          path: "./package.json"
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: v${{ env.PACKAGE_VERSION }}
+          prerelease: false
+  merge-branch:
+    name: Merge branch
+    needs: [release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: everlytic/branch-merge@1.1.0
+        with:
+          github_token: ${{ github.token }}
+          source_ref: ${{ github.ref }}
+          target_branch: "develop"
+          commit_message_template: "Merged {source_ref} into {target_branch}"
