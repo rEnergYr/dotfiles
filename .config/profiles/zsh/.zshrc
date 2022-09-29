@@ -6,8 +6,8 @@ neofetch
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/macos.omp.json)"
 
 # Plugins
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
 
 # Config
 bindkey '^[[A' history-substring-search-up
