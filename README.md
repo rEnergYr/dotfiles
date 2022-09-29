@@ -11,6 +11,10 @@
 - PowerShell config
 - GitHub's workflows config
 
+## Font
+
+- [FiraCode](https://github.com/ryanoasis/nerd-fonts) - Nerd fonts
+
 ## Zsh setup
 
 Requires [zsh](https://www.zsh.org/) (>= 5.8.1)
