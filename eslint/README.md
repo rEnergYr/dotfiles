@@ -1,6 +1,8 @@
 # Eslint
 
-My eslint config for
+My eslint config with typescript
+
+## Contents
 
 - [Nuxt 3](https://v3.nuxtjs.org/)
 - [Adonisjs](https://adonisjs.com/)
