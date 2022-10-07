@@ -1,6 +1,6 @@
-# Eslint
+# ESLint
 
-My eslint config with typescript
+My ESLint config with typescript
 
 ## Contents
 
@@ -22,7 +22,7 @@ Add packages as dev dependencies
 yarn add -D eslint eslint-plugin-vue eslint-plugin-nuxt vite-plugin-eslint typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
-Init eslint config
+Init ESLint config
 
 ```shell
 yarn create @eslint/config
