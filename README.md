@@ -10,6 +10,7 @@
 - Zsh config
 - PowerShell config
 - GitHub's workflows config
+- ESLint config
 
 ## Font
 

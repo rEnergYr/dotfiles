@@ -1,0 +1,38 @@
+{
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2022": true,
+      "node": true
+    },
+    "extends": [
+      "@nuxtjs/eslint-config-typescript",
+      "airbnb-base",
+      "plugin:vue/vue3-recommended",
+      "plugin:nuxt/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser",
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "vue",
+      "nuxt",
+      "prettier"
+    ],
+    "rules": {}
+  },
+  "eslintIgnore": ["node_modules", ".nuxt" ,".output"],
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "endOfLine": "auto",
+    "printWidth": 200
+  }
+}
