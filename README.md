@@ -29,6 +29,7 @@ Requires [zsh](https://www.zsh.org/) (>= 5.8.1)
 - [neovim/neovim](https://github.com/neovim/neovim) - Vim-fork focused on extensibility and usability
 - [AstroNvim/AstroNvim](https://github.com/AstroNvim/AstroNvim) - Aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins
 - [sharkdp/bat](https://github.com/sharkdp/bat) - A cat(1) clone with wings.
+- [httpie/httpie](https://github.com/httpie/httpie) - HTTPie for Terminal — modern, user-friendly command-line HTTP client.
 
 ## Powershell setup
 
