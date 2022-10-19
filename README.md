@@ -41,3 +41,4 @@ Requires [pwsh](https://github.com/PowerShell/PowerShell) (>= 7.2.6)
 - [neovim/neovim](https://github.com/neovim/neovim) - Vim-fork focused on extensibility and usability
 - [AstroNvim/AstroNvim](https://github.com/AstroNvim/AstroNvim) - Aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins
 - [sharkdp/bat](https://github.com/sharkdp/bat) - A cat(1) clone with wings.
+- [rs/curlie](https://github.com/rs/curlie) - The power of curl, the ease of use of httpie.

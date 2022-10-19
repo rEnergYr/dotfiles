@@ -14,3 +14,4 @@ Import-Module  ~\scoop\apps\terminal-icons\current\Terminal-Icons
 Set-Alias ll ls
 Set-Alias vim nvim
 Set-Alias cat bat
+Set-Alias http curlie
