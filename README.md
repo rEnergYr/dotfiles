@@ -20,6 +20,7 @@
 
 Requires [zsh](https://www.zsh.org/) (>= 5.8.1)
 
+- [Homebrew/brew](https://github.com/Homebrew/brew) - 🍺 The missing package manager for macOS (or Linux)
 - [JanDeDobbeleer/oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh) - A prompt theme engine for any shell
 - [withfig/autocomplete](https://github.com/withfig/autocomplete) - Fig adds autocomplete to your terminal
 - [zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell like syntax highlighting for Zsh
@@ -30,6 +31,12 @@ Requires [zsh](https://www.zsh.org/) (>= 5.8.1)
 - [AstroNvim/AstroNvim](https://github.com/AstroNvim/AstroNvim) - Aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins
 - [sharkdp/bat](https://github.com/sharkdp/bat) - A cat(1) clone with wings.
 - [httpie/httpie](https://github.com/httpie/httpie) - HTTPie for Terminal — modern, user-friendly command-line HTTP client.
+
+Install ruby with brew
+
+```sh
+brew install ruby
+```
 
 ## Powershell setup
 

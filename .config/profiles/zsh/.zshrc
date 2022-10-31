@@ -21,5 +21,8 @@ alias llf="colorls -l --sf"
 alias vim="nvim"
 alias cat="bat"
 
+# Ruby with homebrew
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH" && PATH=$(ruby -e 'puts Gem.bindir'):$PATH
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
