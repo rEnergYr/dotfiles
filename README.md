@@ -7,14 +7,9 @@
 
 - ITerm2 config
 - Oh My Posh config
-- Zsh config
-- PowerShell config
+- Zsh / Powershell config
 - GitHub's workflows config
 - ESLint config
-
-## Font
-
-- [FiraCode](https://github.com/ryanoasis/nerd-fonts) - Nerd fonts
 
 ## Zsh setup
 
@@ -50,3 +45,7 @@ Requires [pwsh](https://github.com/PowerShell/PowerShell) (>= 7.2.6)
 - [AstroNvim/AstroNvim](https://github.com/AstroNvim/AstroNvim) - Aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins
 - [sharkdp/bat](https://github.com/sharkdp/bat) - A cat(1) clone with wings.
 - [rs/curlie](https://github.com/rs/curlie) - The power of curl, the ease of use of httpie.
+
+## Font
+
+- [FiraCode](https://github.com/ryanoasis/nerd-fonts) - Nerd fonts
