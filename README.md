@@ -46,6 +46,7 @@ Requires [pwsh](https://github.com/PowerShell/PowerShell) (>= 7.2.6)
 - [sharkdp/bat](https://github.com/sharkdp/bat) - A cat(1) clone with wings.
 - [rs/curlie](https://github.com/rs/curlie) - The power of curl, the ease of use of httpie.
 
-## Font
+## Fonts
 
 - [FiraCode](https://github.com/ryanoasis/nerd-fonts) - Nerd fonts
+- [CascadiaCode](https://github.com/ryanoasis/nerd-fonts) - Nerd fonts
