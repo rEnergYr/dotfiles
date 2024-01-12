@@ -1,3 +1,6 @@
+# Change title
+$host.UI.RawUI.WindowTitle = "PowerShell"
+
 # Load prompt config
 oh-my-posh init pwsh --config "~\.config\powershell\win.omp.json" | Invoke-Expression
 
@@ -8,7 +11,7 @@ Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineOption -PredictionSource History
 
 # Modules
-Import-Module  ~\scoop\apps\terminal-icons\current\Terminal-Icons
+Import-Module ~\scoop\apps\terminal-icons\current\Terminal-Icons
 
 # Alias
 Set-Alias ll ls
