@@ -1,6 +1,3 @@
-# Change title
-$host.UI.RawUI.WindowTitle = "PowerShell"
-
 # Load prompt config
 oh-my-posh init pwsh --config "~\.config\powershell\win.omp.json" | Invoke-Expression
 
@@ -15,5 +12,5 @@ Import-Module ~\scoop\apps\terminal-icons\current\Terminal-Icons
 
 # Alias
 Set-Alias ll ls
-Set-Alias vim nvim
+Set-Alias vim nvim   
 Set-Alias http curlie
