@@ -7,7 +7,7 @@ source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substrin
 
 # Prompt
 neofetch
-eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/macos.omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/zsh.omp.json)"
 
 # Config
 bindkey '^[[A' history-substring-search-up

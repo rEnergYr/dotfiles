@@ -1,5 +1,5 @@
 # Load prompt config
-oh-my-posh init pwsh --config "~\.config\powershell\win.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "~\.config\powershell\pwsh.omp.json" | Invoke-Expression
 
 # PSReadLine
 Set-PSReadLineOption -EditMode Emacs
