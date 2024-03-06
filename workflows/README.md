@@ -8,7 +8,7 @@ Automated process for my development
 📂 Workflows
 ┣ 📜 linter.yaml (lint the code base)
 ┣ 📜 build.yaml (build docker image & push to dockerhub)
-┗ 📜 release.yaml (create tag and release using the package version)
+┣ 📜 release.yaml (create tag and release using the package version)
 ┗ 📜 npm.yaml (push package to npm registry)
 ```
 
