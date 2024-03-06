@@ -6,9 +6,10 @@ Automated process for my development
 
 ```
 📂 Workflows
-┣ 📜 linter.yml (lint the code base)
-┣ 📜 build.yml (build docker image & push to dockerhub)
-┗ 📜 release.yml (create tag and release using the package version)
+┣ 📜 linter.yaml (lint the code base)
+┣ 📜 build.yaml (build docker image & push to dockerhub)
+┗ 📜 release.yaml (create tag and release using the package version)
+┗ 📜 npm.yaml (push package to npm registry)
 ```
 
 ## GitHub Secrets
@@ -17,6 +18,7 @@ Automated process for my development
 DOCKER_USERNAME
 DOCKER_PASSWORD
 DOCKER_REPOSITORY
+NPM_TOKEN
 ```
 
 ## PR Labels
