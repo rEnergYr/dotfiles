@@ -1,5 +1,7 @@
 name: Npm package CI
 
+permissions: read-all
+
 on:
   pull_request:
     branches: ['main']
