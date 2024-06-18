@@ -1,31 +1,30 @@
 # ESLint
 
-My ESLint config with typescript
-
-## Contents
-
-- [Nuxt 3](https://v3.nuxtjs.org/)
-- [Adonisjs](https://adonisjs.com/)
+My ESLint/Prettier config with typescript
 
 ## Directory & file structure
 
 ```
 📂 Workflows
-┗ 📜 nuxt3.config.json (prettier/airbnb)
+┗ 📜 adonisjs.config.cjs (prettier/airbnb)
+┗ 📜 nuxt.config.cjs (prettier/airbnb)
+┗ 📜 tsapp.config.cjs (prettier/airbnb)
 ```
 
-## Nuxt 3
+## Typescript app
 
 Add packages as dev dependencies
 
 ```shell
-yarn add -D eslint eslint-plugin-vue eslint-plugin-nuxt vite-plugin-eslint typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript prettier eslint-config-prettier eslint-plugin-prettier
+yarn add -D eslint@8.57.0 prettier eslint-plugin-import eslint-config-airbnb-base eslint-config-airbnb-typescript eslint-config-prettier eslint-plugin-prettier typescript-eslint globals
 ```
 
-Init ESLint config
+## Nuxt
+
+Add packages as dev dependencies
 
 ```shell
-yarn create @eslint/config
+yarn add -D eslint@8.57.0 eslint-plugin-vue eslint-plugin-nuxt vite-plugin-eslint typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb-base eslint-plugin-import
 ```
 
 ## Airbnb JS Style Guide into Adonisjs
@@ -33,17 +32,5 @@ yarn create @eslint/config
 Add packages as dev dependencies
 
 ```shell
-yarn add -D eslint-plugin-import eslint-config-airbnb-base eslint-config-airbnb-typescript
-```
-
-Add packages at end of extends
-
-```json
-{
-  "extends": [
-    "airbnb-base",
-    "airbnb-typescript/base", 
-    "prettier"
-  ]
-}
+yarn add -D eslint@8.57.0 eslint-plugin-import eslint-config-airbnb-base eslint-config-airbnb-typescript
 ```
