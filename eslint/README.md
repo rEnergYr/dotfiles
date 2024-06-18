@@ -19,7 +19,7 @@ Add packages as dev dependencies
 yarn add -D eslint@8.57.0 prettier eslint-plugin-import eslint-config-airbnb-base eslint-config-airbnb-typescript eslint-config-prettier eslint-plugin-prettier typescript-eslint globals
 ```
 
-## Nuxt
+## Nuxt (v3)
 
 Add packages as dev dependencies
 
@@ -27,7 +27,7 @@ Add packages as dev dependencies
 yarn add -D eslint@8.57.0 eslint-plugin-vue eslint-plugin-nuxt vite-plugin-eslint typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb-base eslint-plugin-import
 ```
 
-## Adonisjs
+## Adonisjs (v5)
 
 Add packages as dev dependencies
 
