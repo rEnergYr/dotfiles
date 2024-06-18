@@ -27,7 +27,7 @@ Add packages as dev dependencies
 yarn add -D eslint@8.57.0 eslint-plugin-vue eslint-plugin-nuxt vite-plugin-eslint typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb-base eslint-plugin-import
 ```
 
-## Airbnb JS Style Guide into Adonisjs
+## Adonisjs
 
 Add packages as dev dependencies
 
