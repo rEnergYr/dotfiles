@@ -11,7 +11,7 @@ My ESLint/Prettier config with typescript
 ┗ 📜 tsapp.config.cjs (prettier/airbnb)
 ```
 
-## Typescript app
+## TypeScript app
 
 Add packages as dev dependencies
 
