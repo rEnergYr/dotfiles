@@ -8,7 +8,7 @@ My ESLint/Prettier config with typescript
 📂 ESLint
 ┣ 📜 adonisjs.config.cjs (prettier/airbnb)
 ┣ 📜 nuxt.config.cjs (prettier/airbnb)
-┗ 📜 svelte.config.cjs (prettier/airbnb)
+┣ 📜 svelte.config.cjs (prettier/airbnb)
 ┗ 📜 tsapp.config.cjs (prettier/airbnb)
 ```
 
