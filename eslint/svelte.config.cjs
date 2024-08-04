@@ -5,7 +5,7 @@ module.exports = {
       "sourceType": "module",
       "tsconfigRootDir": __dirname
     },
-    "ignorePatterns": ["node_modules", ".eslintrc.cjs", "*.json"],
+    "ignorePatterns": ["node_modules", ".eslintrc.cjs", "*.json", "build", ".svelte-kit"],
     "extends": [
       "airbnb-base",
       "plugin:svelte/recommended",
