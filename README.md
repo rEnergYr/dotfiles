@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/unicorn-astronaut.webp" width="115" />
+  <img src="assets/unicorn-astronaut.webp" width="150" />
 </p>
 <h1 align="center">~ Dotfiles ~</h1>
 
@@ -45,5 +45,5 @@ Requires [pwsh](https://github.com/PowerShell/PowerShell) (>= 7.2.6)
 
 ## Fonts
 
-- [MonoLisa](https://www.monolisa.dev) - For code editor
-- [FiraCode](https://github.com/ryanoasis/nerd-fonts) - For terminal
+- [MonoLisa](https://www.monolisa.dev) - For code editor.
+- [FiraCode](https://github.com/ryanoasis/nerd-fonts) - For terminal.
