@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.freepik.com/premium-vector/planets-star-unicorns-space-cute-vector-illustration-constellation-unicorn_579837-47.jpg?w=115" />
+  <img src="assets/unicorn-astronaut.webp" width="115" />
 </p>
 <h1 align="center">~ Dotfiles ~</h1>
 
@@ -10,6 +10,7 @@
 - Zsh / Powershell config
 - GitHub's workflows config
 - ESLint config
+- Zed Code Editor config
 
 ## Zsh setup
 
@@ -26,12 +27,8 @@ Requires [zsh](https://www.zsh.org/) (>= 5.8.1)
 - [AstroNvim/AstroNvim](https://github.com/AstroNvim/AstroNvim) - Aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins
 - [sharkdp/bat](https://github.com/sharkdp/bat) - A cat(1) clone with wings.
 - [httpie/httpie](https://github.com/httpie/httpie) - HTTPie for Terminal — modern, user-friendly command-line HTTP client.
-
-Install ruby with brew
-
-```sh
-brew install ruby
-```
+- [ruby/ruby](https://github.com/ruby/ruby) - The Ruby Programming Language.
+- [rust-lang/rust](https://github.com/rust-lang/rust) - Empowering everyone to build reliable and efficient software.
 
 ## Powershell setup
 
@@ -48,5 +45,5 @@ Requires [pwsh](https://github.com/PowerShell/PowerShell) (>= 7.2.6)
 
 ## Fonts
 
-- [FiraCode](https://github.com/ryanoasis/nerd-fonts) - Nerd fonts
-- [CascadiaCode](https://github.com/ryanoasis/nerd-fonts) - Nerd fonts
+- [MonoLisa](https://www.monolisa.dev) - For code editor
+- [FiraCode](https://github.com/ryanoasis/nerd-fonts) - For terminal
