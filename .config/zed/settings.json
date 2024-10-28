@@ -19,7 +19,7 @@
   "autosave": "on_focus_change",
   "base_keymap": "JetBrains",
   "buffer_font_family": "MonoLisa",
-  "buffer_font_size": 18,
+  "buffer_font_size": 19,
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
