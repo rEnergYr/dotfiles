@@ -1,0 +1,58 @@
+{
+  "assistant": {
+    "default_model": {
+      "model": "gpt-4o",
+      "provider": "copilot_chat"
+    },
+    "version": "2"
+  },
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "dockerfile": true,
+    "emmet": true,
+    "env": true,
+    "html": true,
+    "svelte": true,
+    "vue": true,
+    "wakatime": true
+  },
+  "autosave": "on_focus_change",
+  "base_keymap": "JetBrains",
+  "buffer_font_family": "MonoLisa",
+  "buffer_font_size": 18,
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment": {
+        "font_style": "italic"
+      },
+      "comment.doc": {
+        "font_style": "italic"
+      },
+      "constructor": {
+        "font_style": "italic"
+      },
+      "keyword": {
+        "font_style": "italic"
+      },
+      "string": {
+        "font_style": "italic"
+      }
+    }
+  },
+  "lsp": {
+    "wakatime": {
+      "settings": {
+        "api-key": "..."
+      }
+    }
+  },
+  "tab_size": 2,
+  "telemetry": {
+    "metrics": false
+  },
+  "terminal": {
+    "font_family": "FiraCode Nerd Font"
+  },
+  "theme": "Catppuccin Macchiato - No Italics",
+  "ui_font_size": 16
+}
