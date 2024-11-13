@@ -16,7 +16,7 @@ Automated process for my development
 
 ```dotenv
 DOCKER_USERNAME
-DOCKER_PASSWORD
+DOCKER_TOKEN
 DOCKER_REPOSITORY
 NPM_TOKEN
 ```
