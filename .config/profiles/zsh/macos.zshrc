@@ -23,6 +23,9 @@ alias cat="bat"
 # Ruby with homebrew
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH" && PATH=$(ruby -e 'puts Gem.bindir'):$PATH
 
+# Bun with homebrew
+export PATH="${HOME}/.bun/bin:$PATH"
+
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
 # Amazon Q post block. Keep at the bottom of this file.
