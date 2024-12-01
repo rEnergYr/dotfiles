@@ -47,6 +47,16 @@
         }
       }
     },
+    "Markdown": {
+      "format_on_save": "on"
+    },
+    "Svelte": {
+      "formatter": {
+        "code_actions": {
+          "source.fixAll.eslint": true
+        }
+      }
+    },
     "TypeScript": {
       "formatter": {
         "code_actions": {
@@ -54,8 +64,12 @@
         }
       }
     },
-    "Markdown": {
-      "format_on_save": "on"
+    "Vue.js": {
+      "formatter": {
+        "code_actions": {
+          "source.fixAll.eslint": true
+        }
+      }
     }
   },
   "lsp": {
