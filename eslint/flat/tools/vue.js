@@ -6,7 +6,7 @@ import { browserConfig } from "../base/browser.js";
  *
  * @type {import("eslint").Linter.Config}
  */
-export const nuxtConfig = [
+export const vueConfig = [
   ...browserConfig,
   ...eslintPluginVue.configs['flat/recommended'],
   {
