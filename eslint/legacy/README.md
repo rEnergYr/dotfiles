@@ -5,7 +5,7 @@ My ESLint/Prettier config with typescript
 ## Directory & file structure
 
 ```
-📂 ESLint
+📂 legacy
 ┣ 📜 adonisjs.config.cjs (prettier/airbnb)
 ┣ 📜 nuxt.config.cjs (prettier/airbnb)
 ┣ 📜 svelte.config.cjs (prettier/airbnb)
