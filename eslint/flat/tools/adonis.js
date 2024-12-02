@@ -7,6 +7,6 @@ import { config as baseConfig } from "../base/config.js";
  * @type {import("eslint").Linter.Config}
  */
 export const adonisJsConfig = [
-  ...baseConfig,
   ...configApp(),
+  ...baseConfig,
 ];
