@@ -17,10 +17,10 @@ export const config = [
   eslintPluginPrettierRecommended,
   {
     languageOptions: {
-        parserOptions: {
-          parser: tsParser,
-        },
+      parserOptions: {
+        parser: tsParser,
       },
+    },
     plugins: {
       turbo: turboPlugin,
     },
