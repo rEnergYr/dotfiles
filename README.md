@@ -29,6 +29,7 @@ Requires [zsh](https://www.zsh.org/) (>= 5.8.1)
 - [httpie/httpie](https://github.com/httpie/httpie) - HTTPie for Terminal — modern, user-friendly command-line HTTP client.
 - [ruby/ruby](https://github.com/ruby/ruby) - The Ruby Programming Language.
 - [rust-lang/rust](https://github.com/rust-lang/rust) - Empowering everyone to build reliable and efficient software.
+- [junegunn/fzf](https://github.com/junegunn/fzf) - 🌸 A command-line fuzzy finder.
 
 ## Powershell setup
 
