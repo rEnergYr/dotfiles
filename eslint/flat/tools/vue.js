@@ -7,9 +7,9 @@ import { browserConfig } from "../base/browser.js";
  * @type {import("eslint").Linter.Config}
  */
 export const vueConfig = [
-  ...browserConfig,
-  ...eslintPluginVue.configs['flat/recommended'],
   {
     ignores: [".nuxt/**", ".output/**"],
-  }
+  },
+  ...browserConfig,
+  ...eslintPluginVue.configs['flat/recommended']
 ];

@@ -7,6 +7,9 @@ import { config as baseConfig } from "../base/config.js";
  * @type {import("eslint").Linter.Config}
  */
 export const adonisJsConfig = [
+  {
+    ignores: ["build/**"],
+  },
   ...configApp(),
   ...baseConfig,
 ];
