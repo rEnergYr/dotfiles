@@ -20,6 +20,7 @@ alias llf="colorls -l --sf"
 alias vim="nvim"
 alias cat="bat"
 alias d="docker"
+alias b="bun"
 alias g="git"
 alias gs="git status"
 alias gl="git log --graph"
@@ -31,6 +32,7 @@ alias gbd="git branch | grep -v '\*' | grep -v -E 'main|develop' | awk '{\$1=\$1
 alias gca="git status --short | fzf --multi | awk '{print \$2}' | xargs git add && bunx git-cz"
 alias gcu="git reset --soft HEAD~1"
 alias gcp="git push origin \$(git rev-parse --abbrev-ref HEAD)"
+alias search="fzf --preview 'bat --style=numbers --color=always {}'"
 
 # Ruby with homebrew
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH" && PATH=$(ruby -e 'puts Gem.bindir'):$PATH
