@@ -1,0 +1,83 @@
+{
+  // File management
+  "files.autoSave": "onFocusChange",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  // Code formatting and linting
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "svelte"
+  ],
+  // Editor appearance and behavior
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontFamily": "MonoLisa",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 2.5,
+  "editor.tabSize": 2,
+  "editor.linkedEditing": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  // Syntax highlighting customization
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment", // Comments in the code "keyword"
+          "keyword", // Keywords (e.g., `if`, `else`) "storage.type"
+          "storage.type", // Storage type (e.g., `const`, `let`) "storage.modifier"
+          "storage.modifier", // Modifiers (e.g., `readonly`) "keyword.control"
+          "keyword.control", // Control keywords (e.g., `return`) "keyword.operator.new" 
+          "keyword.operator.new" // Operators like `new`
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  // Svelte-specific settings
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode",
+    "editor.formatOnSave": false
+  },
+  "svelte.enable-ts-plugin": true,
+  // User interface and terminal
+  "window.zoomLevel": 0.5,
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontSize": 16,
+  // Extensions-specific settings
+  "vscode-pets.theme": "forest",
+  "vscode-pets.position": "explorer",
+  "vscode-pets.petType": "cat",
+  "npm.packageManager": "bun",
+  "workbench.colorTheme": "Deep Blue",
+  "emmet.includeLanguages": {
+    "edge": "html"
+  },
+  "cSpell.ignorePaths": [
+    "*.edge",
+    "docker-compose.yaml"
+  ],
+  "cSpell.ignoreRegExpList": [
+    "^import\\s+.*\\s+from\\s+['\"].*['\"];?$" // Ignore ESM imports 
+  ],
+  "cSpell.diagnosticLevel": "Hint",
+  // Additional tools and integrations
+  "database-client.autoSync": true,
+  "gitlens.ai.model": "github:gpt-4o",
+  "redhat.telemetry.enabled": false,
+  "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
+  "githubLocalActions.actCommand": "act --container-daemon-socket -",
+  "errorLens.delay": 750
+}
