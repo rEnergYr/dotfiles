@@ -61,7 +61,7 @@ Packages:
 
 Requires:
 
-- [`trae.ai`](https://www.trae.ai) (>= 1.0.1)
+- [`trae.ai`](https://www.trae.ai) (v1.0.1)
 
 ![Trae.ai](assets/trae-ai.png)
 
