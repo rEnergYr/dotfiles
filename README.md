@@ -1,4 +1,4 @@
-![dotfiles](https://socialify.git.ci/rEnergYr/dotfiles/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Plus&theme=Dark)
+![Iterm2](assets/dotfiles.png)
 
 ## Configuration
 
@@ -88,5 +88,3 @@ Extensions:
 
 - [`MonoLisa`](https://www.monolisa.dev) - For code editor.
 - [`FiraCode`](https://github.com/ryanoasis/nerd-fonts) - For terminal.
-
-
