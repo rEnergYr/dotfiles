@@ -6,11 +6,16 @@ Automated process for my development
 
 ```
 📂 Workflows
-┣ 📜 linter.yaml (lint the code base)
-┣ 📜 build-docker.yaml (build docker image & push to dockerhub)
-┣ 📜 npm.yaml (push package to npm registry)
-┗ 📜 release.yaml (create tag and release using the package version)
+┣ 📜 linter.yaml
+┣ 📜 build-docker.yaml
+┣ 📜 npm.yaml
+┗ 📜 release.yaml
 ```
+
+`linter.yaml` lint the code base
+`build-docker.yaml` build docker image & push to docker hub
+`npm.yaml` push package to npm registry
+`release.yaml` create tag and release using the package version
 
 ## GitHub Secrets
 
@@ -21,7 +26,12 @@ DOCKER_REPOSITORY
 NPM_TOKEN
 ```
 
-## PR Labels
+`DOCKER_USERNAME` username docker hub account
+`DOCKER_TOKEN` token docker hub account
+`DOCKER_REPOSITORY` repository name
+`NPM_TOKEN` token npm registry
+
+## Pull request labels
 
 | Name             | Color   | Description                                |
 |------------------|---------|--------------------------------------------|

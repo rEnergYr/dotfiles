@@ -5,7 +5,7 @@ My ESLint/Prettier config with typescript
 ## Directory & file structure
 
 ```
-📂 flat
+📂 eslint
 ┣ 📁 base
 ┃ ┣ 📜 browser.js
 ┃ ┗ 📜 config.js
