@@ -1,4 +1,6 @@
-![Iterm2](assets/dotfiles.png)
+<p align="center">
+  <img src="https://socialify.git.ci/rEnergYr/dotfiles/image?font=Inter&language=1&name=1&owner=1&pattern=Plus&theme=Dark" alt="rEnergYr/dotfiles" width="640" height="320" />
+</p>
 
 ## Configuration
 
