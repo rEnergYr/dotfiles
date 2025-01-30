@@ -59,9 +59,7 @@
   // Extensions-specific settings
   "vscode-pets.theme": "forest",
   "vscode-pets.position": "explorer",
-  "vscode-pets.petType": "cat",
   "npm.packageManager": "bun",
-  "workbench.colorTheme": "Deep Blue",
   "emmet.includeLanguages": {
     "edge": "html"
   },
@@ -79,5 +77,9 @@
   "redhat.telemetry.enabled": false,
   "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
   "githubLocalActions.actCommand": "act --container-daemon-socket -",
-  "errorLens.delay": 750
+  "errorLens.delay": 750,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Deep Blue",
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false
 }
