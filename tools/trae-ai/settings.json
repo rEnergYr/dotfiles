@@ -46,6 +46,10 @@
       }
     ]
   },
+  // Typescript-specific settings
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   // Svelte-specific settings
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode",
