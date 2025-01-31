@@ -1,5 +1,7 @@
 import globals from 'globals';
 import { config as baseConfig } from "./config.js";
+import tseslint from "typescript-eslint";
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 /**
  * A custom ESLint configuration for libraries that use Browser APIs.
@@ -8,6 +10,8 @@ import { config as baseConfig } from "./config.js";
  */
 export const browserConfig = [
   ...baseConfig,
+  ...tseslint.configs.recommended,
+  eslintPluginPrettierRecommended,
   {
     languageOptions: {
       globals: {

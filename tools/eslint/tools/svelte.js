@@ -8,7 +8,7 @@ import { browserConfig } from "../base/browser.js";
  */
 export const svelteConfig = [
   {
-    ignores: [".svelte-kit/**"],
+    ignores: [".svelte-kit/**", "build/**"],
   },
   ...browserConfig,
   ...eslintPluginSvelte.configs['flat/recommended']

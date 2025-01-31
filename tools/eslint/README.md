@@ -1,6 +1,6 @@
 # ESLint
 
-My ESLint/Prettier config with typescript
+My ESLint/Prettier config with typescript for Turborepo
 
 ## Directory & file structure
 
