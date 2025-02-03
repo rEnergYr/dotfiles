@@ -1,5 +1,6 @@
 # Amazon Q pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+
 # Plugins
 source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
@@ -21,6 +22,7 @@ alias vim="nvim"
 alias cat="bat"
 alias d="docker"
 alias b="bun"
+alias p="pnpm"
 alias g="git"
 alias gs="git status"
 alias gl="git log --graph"
@@ -39,8 +41,14 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH" && PATH=$(ruby -e 'puts Gem.bindi
 
 # Bun with homebrew
 export PATH="${HOME}/.bun/bin:$PATH"
+[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
 
-[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
+# Pnpm with homebrew
+export PNPM_HOME="${HOME}/Library/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
