@@ -77,7 +77,7 @@
   "cSpell.diagnosticLevel": "Hint",
   // Additional tools and integrations
   "database-client.autoSync": true,
-  "gitlens.ai.model": "github:gpt-4o",
+  "gitlens.ai.model": "github:o1-mini",
   "redhat.telemetry.enabled": false,
   "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
   "githubLocalActions.actCommand": "act --container-daemon-socket -",
