@@ -68,6 +68,8 @@ Requires:
 Extensions:
 
 - [`AdonisJS Extension`](https://marketplace.visualstudio.com/items?itemName=jripouteau.adonis-vscode-extension) - The official VSCode extension of AdonisJS
+- [`Catppuccin for VSCode`](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) - Soothing pastel theme for VSCode
+- [`Charmed Icons`](https://marketplace.visualstudio.com/items?itemName=littensy.charmed-icons) - Charming icon set for Roblox codebases
 - [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Spelling checker for source code
 - [`Docker`](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) - Makes it easy to create, manage, and debug containerized applications
 - [`Edge templates syntax highlighter`](https://marketplace.visualstudio.com/items?itemName=AdonisJS.vscode-edge) - Official Edge template engine extension for VSCode
@@ -81,6 +83,7 @@ Extensions:
 - [`MySQL`](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2) - Database Management for MySQL/MariaDB, PostgreSQL, Redis and ElasticSearch
 - [`Pretty TypeScript Errors`](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors) - Make TypeScript errors prettier and more human-readable in VSCode
 - [`Svelte for VS Code`](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) - Svelte language support for VS Code
+- [`Svelte 5 Snippets`](https://marketplace.visualstudio.com/items?itemName=Chanzhaoyu.svelte-5-snippets) - Svelte5 and svelte-kit snippets for vscode
 - [`Tailwind CSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Intelligent Tailwind CSS tooling for VS Code
 - [`Tailwind Fold`](https://marketplace.visualstudio.com/items?itemName=stivo.tailwind-fold) - Improves code readability by folding class attributes
 - [`vscode-pets`](https://marketplace.visualstudio.com/items?itemName=tonybaloney.vscode-pets) - Pets for your VS Code

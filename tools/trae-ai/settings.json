@@ -28,6 +28,7 @@
   "editor.renderWhitespace": "trailing",
   "editor.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
+  "editor.semanticHighlighting.enabled": true,
   // Syntax highlighting customization
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -57,9 +58,11 @@
   },
   "svelte.enable-ts-plugin": true,
   // User interface and terminal
-  "window.zoomLevel": 0.5,
+  "window.zoomLevel": 0.8,
+  "window.titleBarStyle": "custom",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.minimumContrastRatio": 1,
   // Extensions-specific settings
   "vscode-pets.theme": "forest",
   "vscode-pets.position": "explorer",
@@ -82,7 +85,8 @@
   "githubLocalActions.actCommand": "act --container-daemon-socket -",
   "errorLens.delay": 750,
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "Deep Blue",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "charmed-icons",
   "git.confirmSync": false,
   "explorer.confirmDelete": false
 }
