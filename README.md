@@ -82,6 +82,7 @@ Extensions:
 - [`Javascript Auto Backticks`](https://marketplace.visualstudio.com/items?itemName=chamboug.js-auto-backticks) - Automatically converts single or double quotes to backticks when needed
 - [`MySQL`](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2) - Database Management for MySQL/MariaDB, PostgreSQL, Redis and ElasticSearch
 - [`Pretty TypeScript Errors`](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors) - Make TypeScript errors prettier and more human-readable in VSCode
+- [`rust-analyzer`](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) - Rust language support for Visual Studio Code
 - [`Svelte for VS Code`](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) - Svelte language support for VS Code
 - [`Svelte 5 Snippets`](https://marketplace.visualstudio.com/items?itemName=Chanzhaoyu.svelte-5-snippets) - Svelte5 and svelte-kit snippets for vscode
 - [`Tailwind CSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Intelligent Tailwind CSS tooling for VS Code
