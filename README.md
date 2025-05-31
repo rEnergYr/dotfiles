@@ -71,7 +71,7 @@ Extensions:
 - [`Catppuccin for VSCode`](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) - Soothing pastel theme for VSCode
 - [`Charmed Icons`](https://marketplace.visualstudio.com/items?itemName=littensy.charmed-icons) - Charming icon set for Roblox codebases
 - [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Spelling checker for source code
-- [`Docker`](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) - Makes it easy to create, manage, and debug containerized applications
+- [`Container Tools`](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers) - Makes it easy to create, manage, and debug containerized applications
 - [`Edge templates syntax highlighter`](https://marketplace.visualstudio.com/items?itemName=AdonisJS.vscode-edge) - Official Edge template engine extension for VSCode
 - [`Error Lens`](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) - Improve highlighting of errors, warnings and other language diagnostics
 - [`ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Integrates ESLint JavaScript into VS Code
