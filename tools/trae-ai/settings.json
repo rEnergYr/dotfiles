@@ -15,7 +15,9 @@
   "eslint.validate": [
     "javascript",
     "typescript",
-    "svelte"
+    "svelte",
+    "javascriptreact",
+    "typescriptreact"
   ],
   // Editor appearance and behavior
   "editor.cursorSmoothCaretAnimation": "on",
@@ -88,5 +90,8 @@
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.iconTheme": "charmed-icons",
   "git.confirmSync": false,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  }
 }
