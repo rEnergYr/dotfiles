@@ -11,6 +11,7 @@ My ESLint/Prettier config with typescript for Turborepo
 ┃ ┗ 📜 config.js
 ┣ 📁 tools
 ┃ ┣ 📜 adonis.js
+┃ ┣ 📜 react.js
 ┃ ┣ 📜 svelte.js
 ┃ ┗ 📜 vue.js
 ┗ 📜 README.md
