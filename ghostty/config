@@ -1,0 +1,11 @@
+theme                   = "Catppuccin Mocha"
+font-family             = "FiraCode Nerd Font"
+font-family-italic      = MonoLisa
+font-size               = 19
+custom-shader           = ~/.dotfiles/ghostty/cursor_sweep.glsl
+mouse-hide-while-typing = true
+macos-option-as-alt     = true
+window-width            = 110
+window-height           = 35
+background-opacity      = 0.97
+background-blur         = 5
