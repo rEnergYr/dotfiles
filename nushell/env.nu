@@ -1,11 +1,13 @@
 ##### ------------------------------
-##### PATH / Homebrew
+##### PATH
 ##### ------------------------------
 $env.PATH = (
   $env.PATH
   | split row (char esep)
-  | prepend /opt/homebrew/bin
+  | prepend "/usr/local/bin"
+  | prepend "/opt/homebrew/bin"
   | uniq
+  | str join (char esep)
 )
 
 ##### ------------------------------
