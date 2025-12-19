@@ -135,9 +135,6 @@ mkdir -p ~/.config/ghostty
 
 # Symlink config file
 ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
-
-# Symlink shader
-ln -s ~/.dotfiles/ghostty/cursor_sweep.glsl ~/.config/ghostty/cursor_sweep.glsl
 ```
 
 ### 4. Restart Ghostty
