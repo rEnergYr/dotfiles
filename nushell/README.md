@@ -160,8 +160,8 @@ cargo install nu
 mkdir -p ~/.config/nushell
 
 # Symlink config files
-ln -s ~/.dotfiles/nushell/config.nu ~/.config/nushell/config.nu
-ln -s ~/.dotfiles/nushell/env.nu ~/.config/nushell/env.nu
+ln -sf ~/.dotfiles/nushell/config.nu ($env.HOME | path join "Library/Application Support/nushell/config.nu")
+ln -sf ~/.dotfiles/nushell/env.nu   ($env.HOME | path join "Library/Application Support/nushell/env.nu")
 ```
 
 ### 3. Run Installation Script
