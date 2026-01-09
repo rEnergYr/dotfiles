@@ -192,6 +192,7 @@ nu ~/.dotfiles/nushell/install.nu
 - `rust` - Rust toolchain
 - `node` - Node.js runtime
 - `pnpm` - Fast package manager
+- `mole` - Deep clean and optimize your Mac
 
 ### 4. Restart Shell
 

@@ -22,6 +22,7 @@ let packages = [
     "rust"
     "node"
     "pnpm"
+    "mole"
 ]
 
 ##### ------------------------------
