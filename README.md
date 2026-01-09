@@ -75,6 +75,8 @@ cat → bat                   # Prettier cat with syntax highlighting
 d   → docker                # Docker shortcut
 p   → pnpm                  # Package manager
 ai  → copilot               # GitHub Copilot CLI (Claude Sonnet 4.5)
+mc  → mole clean            # Mole clean command
+ms  → mole status           # Mole status command
 ```
 
 ### 🔥 Custom Functions

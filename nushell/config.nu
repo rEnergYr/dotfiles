@@ -29,6 +29,8 @@ alias cat = bat
 alias d   = docker
 alias p   = pnpm
 alias ai  = do { clear; copilot --model claude-sonnet-4.5 }
+alias mc  = mole clean
+alias ms  = mole status
 
 def dev [] {
     tmux new-session -d -s dev -n nvim
