@@ -33,6 +33,12 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+vim.lsp.config("ts_ls", {
+	on_attach = function(client)
+		client.server_capabilities.documentFormattingProvider = false
+	end,
+})
+
 vim.lsp.config("tailwindcss", {
 	root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1]),
 })
