@@ -45,7 +45,7 @@ A carefully curated collection of configuration files for a modern, efficient, a
   - Noice UI enhancements
   - Blink completion
   - LazyDocker & LazySQL integrations
-  - Wakatime tracking (`:WakaTimeApiKey` to setup, view at [wakatime.com/dashboard](https://wakatime.com/dashboard))
+  - Wakatime tracking (requires `brew install wakatime-cli`, then `:WakaTimeApiKey` to setup, view at [wakatime.com/dashboard](https://wakatime.com/dashboard))
   - Media streaming integration - Real-time music playback notifications
 
 - **[Tmux](https://github.com/tmux/tmux)** - Terminal multiplexer
