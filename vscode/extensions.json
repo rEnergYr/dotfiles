@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "brandonkirbyson.vscode-animations",
+    "chamboug.js-auto-backticks",
+    "dbaeumer.vscode-eslint",
+    "github.copilot-chat",
+    "josemurilloc.aura-spirit-dracula",
+    "jripouteau.adonis-vscode-extension",
+    "littensy.charmed-icons",
+    "ms-azuretools.vscode-containers",
+    "redhat.vscode-yaml",
+    "rust-lang.rust-analyzer",
+    "seatonjiang.gitmoji-vscode",
+    "subframe7536.custom-ui-style",
+    "usernamehw.errorlens",
+    "yoavbls.pretty-ts-errors"
+  ]
+}

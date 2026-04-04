@@ -1,0 +1,145 @@
+{
+  "animations.Install-Method": "Custom UI Style",
+  "breadcrumbs.enabled": false,
+  "charmed-icons.hidesExplorerArrows": true,
+  "custom-ui-style.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 20,
+      "y": 16
+    }
+  },
+  "custom-ui-style.external.imports": [
+    "file:///Users/energy/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+  "custom-ui-style.font.sansSerif": "MonoLisa",
+  "custom-ui-style.stylesheet": {
+    ".auxiliarybar": "border: none !important",
+    ".composite .title .has-composite-bar .has-actions": "padding-left: 60px !important",
+    ".composite.title.has-composite-bar.has-actions": "margin-left: 60px !important",
+    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
+    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+    ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #DA70D6 100%)",
+    ".monaco-editor .scroll-decoration": "display: none",
+    ".monaco-list-row.focused": "outline: none !important",
+    ".monaco-pane-view .pane>.pane-header": "display: none !important",
+    ".monaco-scrollable-element > .shadow.top": "display: none",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
+    ".monaco-workbench.vs-dark .part.editor>.content .editor-group-container .editor-group-watermark .letterpress": "background-image: url(\"/Users/energy/Pictures/icons/unicorn-folder.png\") !important; width: 110px",
+    ".notification-toast": "box-shadow: none !important",
+    ".quick-input-list .scrollbar": "display: none",
+    ".quick-input-titlebar": "background: #100B15 !important",
+    ".quick-input-widget": "top: 25vh !important",
+    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    ".sidebar": "border: none !important",
+    ".sidebar .title-label": "padding: 0 !important",
+    ".title .monaco-icon-label:after": "margin-right: 0",
+    ".title .monaco-icon-label.file-icon": "margin: 0 60px",
+    ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center; padding: 0 !important",
+    ".title-actions": "display: none !important",
+    "canvas.decorationsOverviewRuler": "display: none !important"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.codeLens": false,
+  "editor.colorDecorators": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "MonoLisa",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.guides.indentation": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.hover.enabled": "off",
+  "editor.lightbulb.enabled": "off",
+  "editor.lineHeight": 2.5,
+  "editor.links": false,
+  "editor.matchBrackets": "never",
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.parameterHints.enabled": false,
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "none",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "keyword",
+          "storage.type",
+          "storage.modifier",
+          "keyword.control",
+          "keyword.operator.new"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "errorLens.delay": 750,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.decorations.badges": false,
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.decorations.enabled": false,
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.minimumContrastRatio": 1,
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "native",
+  "window.zoomLevel": 2.3,
+  "workbench.activityBar.location": "top",
+  "workbench.browser.showInTitleBar": false,
+  "workbench.colorCustomizations": {
+    "[Aura Dracula Spirit (Soft)]": {
+      "editorSuggestWidget.selectedBackground": "#3A334B",
+      "sideBar.background": "#191521"
+    },
+    "editorCursor.background": "#000000",
+    "editorOverviewRuler.addedForeground": "#0000",
+    "editorOverviewRuler.border": "#0000",
+    "editorOverviewRuler.bracketMatchForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#0000",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.findMatchForeground": "#0000",
+    "editorOverviewRuler.infoForeground": "#0000",
+    "editorOverviewRuler.modifiedForeground": "#0000",
+    "editorOverviewRuler.rangeHighlightForeground": "#0000",
+    "editorOverviewRuler.selectionHighlightForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+    "terminal.background": "#191521"
+  },
+  "workbench.colorTheme": "Aura Dracula Spirit (Soft)",
+  "workbench.editor.showTabs": "single",
+  "workbench.iconTheme": "charmed-light",
+  "workbench.layoutControl.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "workbench.tips.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "none"
+}
