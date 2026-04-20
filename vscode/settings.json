@@ -101,6 +101,7 @@
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "git.confirmSync": false,
   "git.decorations.enabled": false,
   "redhat.telemetry.enabled": false,
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
