@@ -2,6 +2,7 @@ return {
 	"saghen/blink.cmp",
 	name = "blink-cmp",
 	dependencies = {
+		{ "saghen/blink.lib", name = "blink-lib" },
 		{ "rafamadriz/friendly-snippets", name = "friendly-snippets" },
 	},
 	opts = {
