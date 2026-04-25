@@ -22,6 +22,8 @@ export const tailwindConfig = [
     settings:
     {
       "better-tailwindcss": {
+        // Adjust the path to your project's root directory
+        cwd: getProjectPath("path/to/your/project/root"),
         // Adjust the path to your Tailwind CSS entry file
         entryPoint: getProjectPath("path/to/your/index.css"),
       }
