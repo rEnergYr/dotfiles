@@ -15,6 +15,7 @@
   "custom-ui-style.font.sansSerif": "MonoLisa",
   "custom-ui-style.stylesheet": {
     ".auxiliarybar": "border: none !important",
+    ".composite-bar-container": "margin-left: 60px !important",
     ".composite .title .has-composite-bar .has-actions": "padding-left: 60px !important",
     ".composite.title.has-composite-bar.has-actions": "margin-left: 60px !important",
     ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
