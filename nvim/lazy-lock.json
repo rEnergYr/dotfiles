@@ -1,7 +1,7 @@
 {
   "autoclose": { "branch": "main", "commit": "bafd0368716216fa6a7bb2a43ecd889b44efdb46" },
   "autotag": { "branch": "main", "commit": "88c1453db4ba7dd24131086fe51fdf74e587d275" },
-  "blink-cmp": { "branch": "main", "commit": "e1dbca9ea1d8dc7a83e27a52bbd990bd717e54a6" },
+  "blink-cmp": { "branch": "main", "commit": "6f5538d0ac8a154a489036db4b8f0436a7a70771" },
   "blink-lib": { "branch": "main", "commit": "dda2666685a5ac3598166577d2e34f1fff6b1637" },
   "bufferline": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "catppuccin": { "branch": "main", "commit": "426dbebe06b5c69fd846ceb17b42e12f890aedf1" },
@@ -18,7 +18,7 @@
   "none-ls": { "branch": "main", "commit": "8cd333aa66e08492d891bdad272208a620cb93a3" },
   "none-ls-extras": { "branch": "main", "commit": "70ec8815cdf186223af04cc5a15bc8bdface0ef0" },
   "nui": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
-  "nvim-lspconfig": { "branch": "master", "commit": "8fde495949782bb61c2605174e231d145a048d8c" },
+  "nvim-lspconfig": { "branch": "master", "commit": "21db1fd40cbcbf1524ae154ab8f394fdf085749a" },
   "nvim-web-devicons": { "branch": "master", "commit": "c72328a5494b4502947a022fe69c0c47e53b6aa6" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
   "snacks": { "branch": "main", "commit": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e" },
