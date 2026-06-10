@@ -62,6 +62,7 @@
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.parameterHints.enabled": false,
+  "editor.quickSuggestions": "on",
   "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "none",
   "editor.scrollbar.horizontal": "hidden",
