@@ -1,6 +1,9 @@
 ---
 name: Linter CI
 permissions: read-all
+env:
+  PNPM_VERSION: X.X.X
+  NODE_VERSION: X.X.X
 on:
   pull_request:
     branches: [develop]
