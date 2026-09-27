@@ -36,13 +36,20 @@ return {
 		keymap = {
 			preset = "enter",
 			["<Tab>"] = {
-				"select_next",
-				"snippet_forward",
+				function(cmp)
+					local ok, suggestion = pcall(vim.fn["copilot#GetDisplayedSuggestion"])
+					if ok and suggestion and suggestion.text ~= nil and suggestion.text ~= "" then
+						cmp.hide()
+						-- copilot#Accept() returns ALREADY-encoded keycodes:
+						-- do not pass them through vim.keycode()/replace_termcodes
+						-- (double encoding => <80> leftovers), feed them raw.
+						vim.api.nvim_feedkeys(vim.fn["copilot#Accept"](), "n", false)
+						return true
+					end
+				end,
 				"fallback",
 			},
 			["<S-Tab>"] = {
-				"select_prev",
-				"snippet_backward",
 				"fallback",
 			},
 		},
