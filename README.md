@@ -122,8 +122,7 @@ ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 ln -s ~/.dotfiles/neofetch/config.conf  ~/.config/neofetch/config.conf
 
 # LazyGit
-mkdir -p "$HOME/Library/Application Support/lazygit"
-ln -sf ~/.dotfiles/lazygit/config.yml "$HOME/Library/Application Support/lazygit/config.yml"
+ln -sf ~/.dotfiles/lazygit/config.yml ($env.HOME | path join "Library/Application Support/lazygit/config.yml")
 
 # Nushell
 ln -sf ~/.dotfiles/nushell/config.nu ($env.HOME | path join "Library/Application Support/nushell/config.nu")
