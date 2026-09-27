@@ -31,7 +31,7 @@ A carefully curated collection of configuration files for a modern, efficient, a
   - Custom aliases and development functions
   - Automatic Neofetch startup with custom ASCII art
 
-### Editors
+### 🖥️ Editors
 
 I primarily use **Neovim** as my main development environment. My workflow, plugins, keybindings, and tooling are mainly centered around Neovim.
 
