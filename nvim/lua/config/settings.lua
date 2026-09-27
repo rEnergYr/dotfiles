@@ -18,6 +18,20 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
+-- Hide ~ (end-of-buffer) characters
+vim.opt.fillchars:append({ eob = " " })
+
+-- Clean dashboard (no numbers, no cursorline)
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "snacks_dashboard",
+	callback = function()
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
+		vim.opt_local.cursorline = false
+		vim.opt_local.signcolumn = "no"
+	end,
+})
+
 -- Theme
 vim.cmd.colorscheme("catppuccin")
 vim.opt.termguicolors = true
