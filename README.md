@@ -31,6 +31,15 @@ A carefully curated collection of configuration files for a modern, efficient, a
   - Custom aliases and development functions
   - Automatic Neofetch startup with custom ASCII art
 
+### Editors
+
+I primarily use **Neovim** as my main development environment. My workflow, plugins, keybindings, and tooling are mainly centered around Neovim.
+
+I also keep **Visual Studio Code** configured in these dotfiles for occasional use, particularly when a project or specific task benefits from its ecosystem and tooling.
+
+**Primary:** Neovim  
+**Secondary:** Visual Studio Code
+
 ### ⚡ Development Tools
 
 <div align="center">
