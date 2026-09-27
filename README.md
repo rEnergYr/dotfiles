@@ -121,13 +121,13 @@ ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 # Neofetch
 ln -s ~/.dotfiles/neofetch/config.conf  ~/.config/neofetch/config.conf
 
-# Nushell
-ln -sf ~/.dotfiles/nushell/config.nu ($env.HOME | path join "Library/Application Support/nushell/config.nu")
-ln -sf ~/.dotfiles/nushell/env.nu   ($env.HOME | path join "Library/Application Support/nushell/env.nu")
-
 # LazyGit
 mkdir -p "$HOME/Library/Application Support/lazygit"
 ln -sf ~/.dotfiles/lazygit/config.yml "$HOME/Library/Application Support/lazygit/config.yml"
+
+# Nushell
+ln -sf ~/.dotfiles/nushell/config.nu ($env.HOME | path join "Library/Application Support/nushell/config.nu")
+ln -sf ~/.dotfiles/nushell/env.nu   ($env.HOME | path join "Library/Application Support/nushell/env.nu")
 ```
 
 **Install dependencies**
@@ -141,13 +141,12 @@ nu ~/.dotfiles/nushell/install.nu
 In LazyGit, stage the intended changes, focus the **Files** panel, then press
 `M`. Copilot generates a one-line Gitmoji commit message, such as
 `✨ add Tree-sitter CLI installation`, based only on the staged diff and copies
-it to the clipboard. The command closes automatically; paste the message into
-LazyGit's commit-message editor and review it before committing.
+it to the clipboard.
 
 ## 📚 Key Technologies
 
 | Tool | Purpose | Configuration |
-|------|---------|---------------|
+| ------ | --------- | --------------- |
 | 👻 **Ghostty** | Terminal Emulator | [`ghostty/config`](ghostty/config) |
 | 🐚 **Nushell** | Modern Shell | [`nushell/config.nu`](nushell/config.nu) |
 | ✏️ **Neovim** | Text Editor | [`nvim/init.lua`](nvim/init.lua) |
