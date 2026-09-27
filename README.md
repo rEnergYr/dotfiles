@@ -55,6 +55,9 @@ A carefully curated collection of configuration files for a modern, efficient, a
   - Mouse support enabled
   - Tmux-fzf integration
 
+- **[LazyGit](https://github.com/jesseduffield/lazygit)** - Git terminal UI
+  - Generate one-line Gitmoji commit messages from staged changes with GitHub Copilot
+
 ### 🛠️ Code Quality
 
 - **[ESLint](code/eslint/)** - Customizable linting configurations
@@ -121,6 +124,10 @@ ln -s ~/.dotfiles/neofetch/config.conf  ~/.config/neofetch/config.conf
 # Nushell
 ln -sf ~/.dotfiles/nushell/config.nu ($env.HOME | path join "Library/Application Support/nushell/config.nu")
 ln -sf ~/.dotfiles/nushell/env.nu   ($env.HOME | path join "Library/Application Support/nushell/env.nu")
+
+# LazyGit
+mkdir -p "$HOME/Library/Application Support/lazygit"
+ln -sf ~/.dotfiles/lazygit/config.yml "$HOME/Library/Application Support/lazygit/config.yml"
 ```
 
 **Install dependencies**
@@ -128,6 +135,14 @@ ln -sf ~/.dotfiles/nushell/env.nu   ($env.HOME | path join "Library/Application 
 ```bash
 nu ~/.dotfiles/nushell/install.nu
 ```
+
+### Generate commit messages with Copilot
+
+In LazyGit, stage the intended changes, focus the **Files** panel, then press
+`M`. Copilot generates a one-line Gitmoji commit message, such as
+`✨ add Tree-sitter CLI installation`, based only on the staged diff and copies
+it to the clipboard. The command closes automatically; paste the message into
+LazyGit's commit-message editor and review it before committing.
 
 ## 📚 Key Technologies
 
@@ -137,6 +152,7 @@ nu ~/.dotfiles/nushell/install.nu
 | 🐚 **Nushell** | Modern Shell | [`nushell/config.nu`](nushell/config.nu) |
 | ✏️ **Neovim** | Text Editor | [`nvim/init.lua`](nvim/init.lua) |
 | 🖥️ **Tmux** | Terminal Multiplexer | [`tmux/tmux.conf`](tmux/tmux.conf) |
+| 🦥 **LazyGit** | Git Terminal UI | [`lazygit/config.yml`](lazygit/config.yml) |
 | 🎨 **Neofetch** | System Info | [`neofetch/ascii.txt`](neofetch/ascii.txt) |
 | 🔍 **ESLint** | Linting | [`code/eslint/`](code/eslint/) |
 
