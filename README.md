@@ -130,6 +130,10 @@ ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 # Neofetch
 ln -s ~/.dotfiles/neofetch/config.conf  ~/.config/neofetch/config.conf
 
+# OpenCode
+ln -s ~/.dotfiles/opencode/opencode.jsonc ~/.config/opencode/opencode.jsonc
+ln -s ~/.dotfiles/opencode/cli.json ~/.config/opencode/cli.json
+
 # LazyGit
 ln -sf ~/.dotfiles/lazygit/config.yml ($env.HOME | path join "Library/Application Support/lazygit/config.yml")
 

@@ -28,7 +28,7 @@ alias n   = nvim
 alias cat = bat
 alias d   = docker
 alias p   = pnpm
-alias ai  = do { clear; copilot --model claude-sonnet-4.5 }
+alias ai  = do { clear; opencode }
 alias mc  = mole clean
 alias ms  = mole status
 

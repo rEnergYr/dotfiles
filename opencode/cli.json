@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "animations": true,
+  "theme": {
+    "name": "mercury",
+    "mode": "system"
+  },
+  "cursor": {
+    "blinking": false
+  },
+  "session": {
+    "sidebar": "hide",
+    "permissions": "autoaccept"
+  },
+  "tabs": {
+    "layout": "vertical",
+    "indicators": "numbers"
+  }
+}
