@@ -33,10 +33,12 @@ alias mc  = mole clean
 alias ms  = mole status
 
 def dev [] {
-    tmux new-session -d -s dev -n nvim
-    tmux send-keys -t dev:nvim "n" C-m
-    tmux new-window -t dev -n ai
+    let cwd = $env.PWD
+    tmux new-session -d -s dev -n code -c $cwd
+    tmux send-keys -t dev:code "n" C-m
+    tmux new-window -t dev -n ai -c $cwd
     tmux send-keys -t dev:ai "ai" C-m
+    tmux new-window -t dev -n term -c $cwd
     tmux select-window -t dev:1
     tmux attach-session -t dev
 }
