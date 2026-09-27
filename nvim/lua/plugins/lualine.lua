@@ -11,8 +11,20 @@ return {
 			options = {
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
-					statusline = { "snacks_dashboard" },
-					winbar = { "snacks_dashboard" },
+					statusline = {
+						"snacks_dashboard",
+						"snacks_picker_input",
+						"snacks_picker_list",
+						"snacks_picker_preview",
+						"snacks_layout_box",
+					},
+					winbar = {
+						"snacks_dashboard",
+						"snacks_picker_input",
+						"snacks_picker_list",
+						"snacks_picker_preview",
+						"snacks_layout_box",
+					},
 				},
 			},
 			sections = {
