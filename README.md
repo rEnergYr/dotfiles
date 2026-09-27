@@ -144,13 +144,6 @@ ln -sf ~/.dotfiles/nushell/env.nu   ($env.HOME | path join "Library/Application 
 nu ~/.dotfiles/nushell/install.nu
 ```
 
-### Generate commit messages with Copilot
-
-In LazyGit, stage the intended changes, focus the **Files** panel, then press
-`M`. Copilot generates a one-line Gitmoji commit message, such as
-`✨ add Tree-sitter CLI installation`, based only on the staged diff and copies
-it to the clipboard.
-
 ## 📚 Key Technologies
 
 | Tool | Purpose | Configuration |
