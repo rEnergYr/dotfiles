@@ -178,6 +178,7 @@ nu ~/.dotfiles/nushell/install.nu
 - `tmux` - Terminal multiplexer
 - `carapace` - Completion generator
 - `neovim` - Text editor
+- `tree-sitter` - Parser generator CLI for Neovim syntax parsers
 - `media-control` - Media player control
 - `fd` - Fast file finder
 - `fzf` - Fuzzy finder

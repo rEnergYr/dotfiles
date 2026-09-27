@@ -8,6 +8,7 @@ let packages = [
     "tmux"
     "carapace"
     "neovim"
+    "tree-sitter"
     "media-control"
     "fd"
     "fzf"
