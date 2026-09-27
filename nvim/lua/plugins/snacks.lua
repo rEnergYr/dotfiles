@@ -20,6 +20,19 @@ return {
 			enabled = true,
 			timeout = 3000,
 		},
+		picker = {
+			sources = {
+				explorer = {
+					win = {
+						list = {
+							keys = {
+								["<leader>/"] = { "picker_grep", desc = "Grep in directory" },
+							},
+						},
+					},
+				},
+			},
+		},
 		dim = {
 			animate = {
 				enabled = false,

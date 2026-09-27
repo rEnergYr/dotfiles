@@ -4,5 +4,10 @@ return {
 	event = "VeryLazy",
 	opts = {
 		preset = "helix",
+		icons = {
+			rules = {
+				{ pattern = "grep", icon = "󱎸", color = "green" },
+			},
+		},
 	},
 }
