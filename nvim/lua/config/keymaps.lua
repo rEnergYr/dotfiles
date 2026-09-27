@@ -35,6 +35,9 @@ local keymaps = {
 	{
 		"<leader>e",
 		function()
+			if vim.bo.filetype == "snacks_dashboard" then
+				vim.cmd("enew")
+			end
 			local explorerWin = snacks.picker.get({ source = "explorer" })[1]
 			if explorerWin == nil then
 				snacks.picker.explorer()
