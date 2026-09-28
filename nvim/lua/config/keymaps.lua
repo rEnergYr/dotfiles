@@ -140,6 +140,19 @@ local keymaps = {
 		desc = "Find icons",
 		icon = "",
 	},
+	{
+		"<leader>sw",
+		function()
+			vim.ui.input({ prompt = "Web search: " }, function(input)
+				if input == nil or input == "" then
+					return
+				end
+				vim.ui.open("https://www.google.com/search?q=" .. vim.uri_encode(input))
+			end)
+		end,
+		desc = "Web search",
+		icon = "󰖟",
+	},
 
 	-- LSP
 	{
