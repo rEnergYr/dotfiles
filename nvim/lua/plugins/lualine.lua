@@ -46,11 +46,12 @@ return {
 						return string.format("%s %s", icon, title)
 					end,
 				},
-				lualine_c = {
+				lualine_c = {},
+				lualine_x = {
 					{
 						function()
 							if copilot.is_copilot_active() then
-								return ""
+								return " "
 							end
 							return ""
 						end,
@@ -59,7 +60,8 @@ return {
 						end,
 					},
 				},
-				lualine_x = {
+				lualine_y = { "progress" },
+				lualine_z = {
 					{
 						function()
 							local primary = lsp.get_primary_lsp()
@@ -71,15 +73,15 @@ return {
 						end,
 
 						on_click = function()
-							vim.cmd("checkhealth vim.lsp")
+							local snacks = require("snacks")
+							local primary = lsp.get_primary_lsp()
+							if primary then
+								snacks.notify.info(primary, { title = "LSP active" })
+							else
+								snacks.notify.warn("No LSP attached", { title = "LSP inactive" })
+							end
 						end,
 					},
-				},
-				lualine_y = { "progress" },
-				lualine_z = {
-					function()
-						return "󱑎 " .. os.date("%H:%M")
-					end,
 				},
 			},
 			inactive_sections = {
