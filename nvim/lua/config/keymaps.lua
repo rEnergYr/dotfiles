@@ -182,24 +182,11 @@ local keymaps = {
 	-- Scratch / Notes
 	{
 		"<leader>n",
-		group = "Note",
-		icon = "󰚸",
-	},
-	{
-		"<leader>na",
 		function()
 			snacks.scratch()
 		end,
-		desc = "New note",
-		icon = "󰎜",
-	},
-	{
-		"<leader>nl",
-		function()
-			snacks.scratch.select()
-		end,
-		desc = "List notes",
-		icon = "󱙓",
+		desc = "Edit note",
+		icon = "󰚸",
 	},
 
 	-- Package managers
