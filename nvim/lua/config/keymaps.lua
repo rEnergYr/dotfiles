@@ -6,6 +6,12 @@ local lazydocker = require("lazydocker")
 local keymaps = {
 	-- Vim maps
 	{
+		"a",
+		"i",
+		mode = "n",
+		desc = "Insert left (like i)",
+	},
+	{
 		"aa",
 		function()
 			vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
