@@ -20,7 +20,7 @@ local keymaps = {
 			snacks.notify.info("File saved")
 		end,
 		mode = "i",
-		desc = "Exit insert mode",
+		desc = "Save & exit insert mode",
 	},
 	{
 		"<C-s>",
@@ -35,7 +35,7 @@ local keymaps = {
 		function()
 			snacks.zen.zoom()
 		end,
-		desc = "Show/hide explorer",
+		desc = "Toggle zen mode",
 	},
 	-- Top Picks & Explorer
 	{
@@ -73,13 +73,13 @@ local keymaps = {
 		icon = "󰈔",
 	},
 	{
-		"<leader>fg",
+		"<leader>fn",
 		":bn<CR>",
 		desc = "Next file",
 		icon = "󱨽",
 	},
 	{
-		"<leader>fd",
+		"<leader>fp",
 		":bp<CR>",
 		desc = "Prev file",
 		icon = "󱨻",
@@ -105,6 +105,7 @@ local keymaps = {
 	{
 		"<leader>s",
 		group = "Search",
+		icon = "󰺮",
 	},
 	{
 		"<leader>sc",
@@ -136,7 +137,7 @@ local keymaps = {
 			snacks.picker.recent()
 		end,
 		desc = "Recent files",
-		icon = "󰱼",
+		icon = "󰈔",
 	},
 	{
 		"<leader>si",
@@ -172,11 +173,13 @@ local keymaps = {
 			tca.code_action()
 		end,
 		desc = "Code action",
+		icon = "󰁨",
 	},
 	{
 		"<leader>lf",
 		vim.lsp.buf.format,
 		desc = "Format",
+		icon = "󰉿",
 	},
 	{
 		"<leader>lh",
@@ -196,6 +199,7 @@ local keymaps = {
 			snacks.picker.diagnostics_buffer()
 		end,
 		desc = "Diagnostics",
+		icon = "󰋚",
 	},
 
 	-- Scratch / Notes
@@ -360,13 +364,13 @@ local keymaps = {
 			vim.lsp.buf.format()
 			vim.cmd("wqa")
 		end,
-		desc = "Save",
+		desc = "Save & quit all",
 		icon = "󱣪",
 	},
 	{
 		"<leader>qq",
 		":qa!<CR>",
-		desc = "Force",
+		desc = "Quit without saving",
 		icon = "󰜺",
 	},
 }
