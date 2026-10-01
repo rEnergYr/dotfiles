@@ -86,7 +86,7 @@ n   → nvim                  # Open Neovim
 cat → bat                   # Prettier cat with syntax highlighting
 d   → docker                # Docker shortcut
 p   → pnpm                  # Package manager
-ai  → copilot               # GitHub Copilot CLI (Claude Sonnet 4.5)
+ai  → opencode              # OpenCode (muse-spark free)
 mc  → mole clean            # Mole clean command
 ms  → mole status           # Mole status command
 ```

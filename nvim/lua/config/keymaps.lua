@@ -294,6 +294,21 @@ local keymaps = {
 		desc = "Hide terminal (keep session)",
 	},
 
+	-- AI
+	{
+		"<leader>a",
+		group = "AI",
+		icon = "",
+	},
+	{
+		"<leader>ar",
+		function()
+			require("utils.ai").refactor_file()
+		end,
+		desc = "Refactor file (Copilot)",
+		icon = "󰉿",
+	},
+
 	-- Save & Exit
 	{
 		"<leader>q",
