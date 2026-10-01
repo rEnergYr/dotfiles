@@ -56,7 +56,11 @@ return {
 							return ""
 						end,
 						on_click = function()
-							vim.cmd("Copilot status")
+							if vim.fn.executable("tmux") == 1 and vim.env.TMUX then
+								vim.fn.jobstart({ "tmux", "select-window", "-t", "dev:ai" }, { detach = true })
+							else
+								vim.cmd("Copilot status")
+							end
 						end,
 					},
 				},

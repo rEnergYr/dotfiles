@@ -320,6 +320,18 @@ local keymaps = {
 		desc = "Fix file problems",
 		icon = "󰁨",
 	},
+	{
+		"<leader>ac",
+		function()
+			if vim.fn.executable("tmux") == 1 and vim.env.TMUX then
+				vim.fn.jobstart({ "tmux", "select-window", "-t", "dev:ai" }, { detach = true })
+			else
+				snacks.notify.warn("Not in tmux", { title = "Chat" })
+			end
+		end,
+		desc = "Go to chat",
+		icon = "󰋚",
+	},
 
 	-- Music
 	{
