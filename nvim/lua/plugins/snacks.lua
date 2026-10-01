@@ -39,5 +39,6 @@ return {
 			},
 		},
 		indent = { enabled = true },
+		terminal = {},
 	},
 }

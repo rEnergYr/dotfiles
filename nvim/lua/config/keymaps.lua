@@ -260,6 +260,39 @@ local keymaps = {
 		desc = "Docker",
 		icon = "󰡨",
 	},
+	{
+		"<leader>tt",
+		function()
+			snacks.terminal.toggle(nil, {
+				win = {
+					position = "float",
+					width = 0.8,
+					height = 0.8,
+					border = "rounded",
+				},
+				interactive = true,
+				start_insert = true,
+				auto_insert = true,
+			})
+			vim.schedule(function()
+				if vim.bo.filetype == "snacks_terminal" then
+					vim.cmd("startinsert")
+				end
+			end)
+		end,
+		mode = { "n", "t" },
+		desc = "Floating terminal",
+		icon = "",
+	},
+	{
+		"qq",
+		function()
+			vim.cmd("stopinsert")
+			vim.cmd("hide")
+		end,
+		mode = "t",
+		desc = "Hide terminal (keep session)",
+	},
 
 	-- Save & Exit
 	{
