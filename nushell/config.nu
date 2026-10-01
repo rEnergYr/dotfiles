@@ -34,8 +34,8 @@ alias ms  = mole status
 
 def dev [] {
     let cwd = $env.PWD
-    tmux new-session -d -s dev -n code -c $cwd
-    tmux send-keys -t dev:code "n" C-m
+    tmux new-session -d -s dev -n nvim -c $cwd
+    tmux send-keys -t dev:nvim "n" C-m
     tmux new-window -t dev -n ai -c $cwd
     tmux send-keys -t dev:ai "ai" C-m
     tmux select-window -t dev:1
