@@ -305,8 +305,16 @@ local keymaps = {
 		function()
 			require("utils.ai").refactor_file()
 		end,
-		desc = "Refactor file (Copilot)",
+		desc = "Refactor file",
 		icon = "󰉿",
+	},
+	{
+		"<leader>af",
+		function()
+			require("utils.ai").fix_file()
+		end,
+		desc = "Fix file problems",
+		icon = "󰁨",
 	},
 
 	-- Save & Exit
