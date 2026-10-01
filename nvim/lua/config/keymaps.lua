@@ -317,6 +317,37 @@ local keymaps = {
 		icon = "󰁨",
 	},
 
+	-- Music
+	{
+		"<leader>m",
+		group = "Music",
+		icon = "󰎆",
+	},
+	{
+		"<leader>mh",
+		function()
+			vim.system({ "media-control", "previous-track" })
+		end,
+		desc = "Previous track",
+		icon = "󱨻",
+	},
+	{
+		"<leader>mp",
+		function()
+			vim.system({ "media-control", "toggle-play-pause" })
+		end,
+		desc = "Play / pause",
+		icon = "󰏤",
+	},
+	{
+		"<leader>ml",
+		function()
+			vim.system({ "media-control", "next-track" })
+		end,
+		desc = "Next track",
+		icon = "󱨽",
+	},
+
 	-- Save & Exit
 	{
 		"<leader>q",
