@@ -24,6 +24,7 @@ let packages = [
     "node"
     "pnpm"
     "mole"
+    "anomalyco/tap/opencode-v2"
 ]
 
 ##### ------------------------------
