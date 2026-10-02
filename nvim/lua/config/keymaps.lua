@@ -305,6 +305,14 @@ local keymaps = {
 		icon = "",
 	},
 	{
+		"<leader>aa",
+		function()
+			require("utils.ai").ask()
+		end,
+		desc = "One-shot question",
+		icon = "󰫢",
+	},
+	{
 		"<leader>ar",
 		function()
 			require("utils.ai").refactor_file()

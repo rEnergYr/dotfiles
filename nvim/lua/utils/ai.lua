@@ -9,6 +9,7 @@
     local ai = require("utils.ai")
     ai.refactor_file()
     ai.fix_file()
+    ai.ask()
 
   Functions:
     refactor_file() : nil
@@ -17,12 +18,35 @@
     fix_file() : nil
       Asks Copilot to fix only the current file's diagnostics.
       Does nothing when there is nothing to fix.
+    ask() : nil
+      Asks an open question via vim.ui.input, shows a floating
+      window with a spinner, then either applies file edits
+      (and reloads) or displays the short answer below
+      the question.
 --]]
 
 local M = {}
 
 local running = false
 local spinner_frames = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
+
+local function format_buf_safely(bufnr)
+	if bufnr == nil or not vim.api.nvim_buf_is_valid(bufnr) then
+		return
+	end
+	local clients = vim.lsp.get_clients({ bufnr = bufnr, method = "textDocument/formatting" })
+	if clients == nil or #clients == 0 then
+		return
+	end
+	-- Deferred + async: lets the LSP settle after edit! and avoids
+	-- blocking the UI / noisy timeout notif on slow servers.
+	vim.defer_fn(function()
+		if not vim.api.nvim_buf_is_valid(bufnr) then
+			return
+		end
+		pcall(vim.lsp.buf.format, { bufnr = bufnr, timeout_ms = 3000, async = true })
+	end, 300)
+end
 
 local function get_notifier()
 	local ok, snacks = pcall(require, "snacks")
@@ -129,7 +153,7 @@ local function run_copilot_job(path, prompt, done_msg, noop_msg)
 				if vim.api.nvim_buf_get_name(0) == path then
 					vim.cmd("edit!")
 				end
-				pcall(vim.lsp.buf.format)
+				format_buf_safely(vim.api.nvim_get_current_buf())
 				local msg = done_msg .. fname
 				if vim.fn.getftime(path) == mtime_before then
 					msg = noop_msg .. fname
@@ -203,6 +227,184 @@ function M.fix_file()
 		.. "If a problem cannot be fixed safely, leave it untouched:\n"
 		.. table.concat(problems, "\n")
 	run_copilot_job(path, prompt, "Fixes applied: ", "Nothing to fix: ")
+end
+
+-- Opens (or reuses) the floating window for ask(): question on top,
+-- answer below. Returns buf/win so the job callback can update them.
+local function open_ask_window(question)
+	local buf = vim.api.nvim_create_buf(false, true)
+	vim.bo[buf].filetype = "markdown"
+	vim.bo[buf].buftype = "nofile"
+	vim.bo[buf].swapfile = false
+
+	local width = math.min(100, math.floor(vim.o.columns * 0.75))
+	local height = math.min(30, math.floor(vim.o.lines * 0.6))
+	local row = math.floor((vim.o.lines - height) / 2)
+	local col = math.floor((vim.o.columns - width) / 2)
+
+	local win = vim.api.nvim_open_win(buf, true, {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = row,
+		col = col,
+		style = "minimal",
+		border = "rounded",
+		title = " Copilot ",
+		title_pos = "center",
+	})
+	vim.wo[win].wrap = true
+	vim.wo[win].linebreak = true
+
+	vim.api.nvim_buf_set_lines(buf, 0, -1, false, { "# ❓ " .. question, "", "⠋ Working…" })
+	vim.keymap.set("n", "q", "<cmd>close<CR>", { buffer = buf, silent = true, desc = "Close Copilot answer" })
+	vim.keymap.set("n", "<Esc>", "<cmd>close<CR>", { buffer = buf, silent = true, desc = "Close Copilot answer" })
+	return buf, win
+end
+
+function M.ask()
+	if running then
+		vim.notify("Copilot task already running", vim.log.levels.WARN, { title = "Copilot" })
+		return
+	end
+	if vim.fn.executable("copilot") ~= 1 then
+		vim.notify("copilot CLI not found", vim.log.levels.ERROR, { title = "Copilot" })
+		return
+	end
+	vim.ui.input({ prompt = "Ask Copilot: " }, function(question)
+		if question == nil or question == "" then
+			return
+		end
+		M._ask_run(question)
+	end)
+end
+
+-- Runs the Copilot job for an already-validated question string.
+function M._ask_run(question)
+	local path = vim.api.nvim_buf_get_name(0)
+	if vim.bo.buftype ~= "" then
+		path = ""
+	end
+	local target_buf = path ~= "" and vim.api.nvim_get_current_buf() or nil
+	local cwd = vim.fn.getcwd()
+	if path ~= "" then
+		cwd = vim.fn.fnamemodify(path, ":h")
+		pcall(vim.cmd, "silent write")
+	end
+	running = true
+
+	local buf, _ = open_ask_window(question)
+
+	local frame = 0
+	local timer = (vim.uv or vim.loop).new_timer()
+	timer:start(0, 120, function()
+		frame = frame + 1
+		local spin = spinner_frames[(frame % #spinner_frames) + 1]
+		vim.schedule(function()
+			if vim.api.nvim_buf_is_valid(buf) then
+				pcall(vim.api.nvim_buf_set_lines, buf, 2, 3, false, { spin .. " Working…" })
+			end
+		end)
+	end)
+
+	local mtime_before = path ~= "" and vim.fn.getftime(path) or -1
+	local output = {}
+	local errors = {}
+
+	local context = path ~= "" and ("\nCurrent file open in Neovim: " .. path) or ""
+	local prompt = "You are a coding assistant inside Neovim. User question: "
+		.. question
+		.. context
+		.. "\nRules: if the question asks to create, modify, fix or refactor code/files, "
+		.. "apply the edits directly to the files with your file tools, then reply with exactly one line 'APPLIED'. "
+		.. "Otherwise do NOT touch any file, just answer directly and concisely: "
+		.. "max 12 short lines, markdown for code, no long paragraph, same language as the question."
+
+	vim.fn.jobstart({ "copilot", "-p", prompt, "-s", "--model", "auto", "--allow-all-tools" }, {
+		cwd = cwd,
+		stdout_buffered = true,
+		stderr_buffered = true,
+		on_stdout = function(_, data)
+			for _, line in ipairs(data) do
+				if line ~= "" then
+					table.insert(output, line)
+				end
+			end
+		end,
+		on_stderr = function(_, data)
+			for _, line in ipairs(data) do
+				if line ~= "" then
+					table.insert(errors, line)
+				end
+			end
+		end,
+		on_exit = function(_, code)
+			vim.schedule(function()
+				running = false
+				if not timer:is_closing() then
+					timer:stop()
+					timer:close()
+				end
+				if not vim.api.nvim_buf_is_valid(buf) then
+					return
+				end
+				if code ~= 0 then
+					local detail = errors[#errors] or output[#output] or ("exit code " .. code)
+					pcall(
+						vim.api.nvim_buf_set_lines,
+						buf,
+						2,
+						-1,
+						false,
+						{ "", "✗ Task failed: " .. detail }
+					)
+					return
+				end
+				local applied = false
+				if #output > 0 and output[1]:match("^APPLIED") then
+					applied = true
+				end
+				local file_changed = path ~= "" and vim.fn.getftime(path) ~= mtime_before or false
+				if file_changed then
+					applied = true
+				end
+				-- Auto-refresh like refactor/fix: reload the original file buffer
+				-- (not the floating answer window) when clean, warn when dirty.
+				if path ~= "" and target_buf ~= nil and vim.api.nvim_buf_is_valid(target_buf) then
+					if vim.bo[target_buf].modified then
+						if file_changed then
+							vim.notify(
+								"Copilot finished, but the buffer has unsaved changes (:e! to load)",
+								vim.log.levels.WARN,
+								{ title = "Copilot" }
+							)
+						end
+					else
+						vim.api.nvim_buf_call(target_buf, function()
+							vim.cmd("edit!")
+						end)
+					end
+				end
+				if applied then
+					-- No auto-format here: the file was just reloaded via edit!
+					-- and formatting right away races the LSP (stylua -32803).
+					-- Use <leader>lf manually if needed.
+					local fname = path ~= "" and vim.fn.fnamemodify(path, ":t") or ""
+					local msg = fname ~= "" and ("File updated: " .. fname) or "File updated"
+					pcall(vim.api.nvim_buf_set_lines, buf, 2, -1, false, { "", "✓ " .. msg })
+					return
+				end
+				if #output == 0 then
+					output = { "No answer returned." }
+				end
+				local lines = { "# ❓ " .. question, "" }
+				for _, l in ipairs(output) do
+					table.insert(lines, l)
+				end
+				pcall(vim.api.nvim_buf_set_lines, buf, 0, -1, false, lines)
+			end)
+		end,
+	})
 end
 
 return M
